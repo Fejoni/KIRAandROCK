@@ -1,0 +1,206 @@
+.footer {
+    background: #E0D5D0;
+    padding-top: 30px;
+    padding-bottom: 31px;
+    position: relative;
+    z-index: 1;
+
+    &__wp {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    span {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 140%
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+
+        .arr1 {
+            margin-left: 23px;
+            line-height: 0;
+            margin-right: 23px;
+            width: 49px;
+            overflow: hidden;
+
+            svg {
+                margin-left: -32px;
+            }
+        }
+
+        .arr2 {
+            margin-left: 28px;
+            line-height: 0;
+            overflow: hidden;
+            margin-right: 25px;
+            width: 130px;
+
+            svg {
+                margin-left: -31px;
+            }
+        }
+
+        a {
+            line-height: 0;
+        }
+
+    }
+
+    &__right {
+        a {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 140%;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -8px;
+                height: 1px;
+                background: $text-color;
+                width: 100%;
+                transition: 0.25s;
+            }
+
+            @media (min-width: 1141px) {
+                &:hover {
+                    &::before {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1040px) {
+        padding-bottom: 35px;
+
+        &__wp {
+            align-items: center;
+            flex-direction: column;
+        }
+
+        &__left {
+            justify-content: space-between;
+            width: 100%;
+            max-width: 800px;
+
+            .arr1,
+            .arr2 {
+                width: auto;
+
+                svg {
+                    margin-left: 0;
+                }
+            }
+
+            .arr1,
+            .arr2 {
+                margin-left: 8px;
+                margin-right: 8px;
+            }
+        }
+
+        &__right {
+            margin-top: 20px;
+        }
+    }
+
+    @media (max-width: 760px) {
+        &__left {
+
+            .arr1,
+            .arr2 {
+                svg {
+                    margin-left: -32px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        padding-top: 24px;
+        padding-bottom: 16px;
+
+        &__left {
+            max-width: 400px;
+
+            svg {
+                width: 57px;
+                height: 25px;
+            }
+
+            .btn {
+                height: 20px;
+                // width: 22px;
+                padding-left: 5px;
+                padding-right: 6px;
+                border-width: 1px;
+                margin-top: 5px;
+                margin-left: 6px;
+                font-weight: bold;
+                font-size: 9px;
+                line-height: 140%;
+
+                &::before {
+                    width: 8px;
+                    height: 20px;
+                    top: -3px;
+                    border-width: 1px;
+                    left: -6px;
+                    border-radius: 0 0 2px 0;
+                }
+
+                &::after {
+                    height: 6px;
+                    top: -6px;
+                    border-width: 1px;
+                    left: -3px;
+                    // width: calc(100% + 1px);
+
+                }
+            }
+
+            .arr1 {
+                width: 33px;
+                margin-left: 6px;
+                margin-right: 6px;
+
+                svg {
+                    width: 43px;
+                    margin-left: -10px;
+                }
+            }
+
+            .arr2 {
+                width: 30px;
+
+                svg {
+                    width: 84px;
+                    margin-left: -54px;
+                }
+            }
+        }
+
+        span {
+            font-size: 12px;
+        }
+
+        &__right {
+            margin-top: 18px;
+
+            a {
+                font-size: 9px;
+
+                &::before {
+                    bottom: -5px;
+                }
+            }
+        }
+    }
+}

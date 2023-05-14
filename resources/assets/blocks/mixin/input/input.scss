@@ -1,0 +1,112 @@
+.default-input {
+  position: relative;
+  background: #FAFAFA;
+  width: 100%;
+  height: 60px;
+  cursor: text;
+
+  & label {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: #4F5A65;
+    cursor: text;
+    @include transition('font-size, top');
+  }
+
+  & input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 0;
+    padding: 28px 20px 12px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #232323;
+    font-weight: 400;
+    //opacity: 0;
+    //visibility: hidden;
+    @include transition;
+  }
+
+  &.active {
+    z-index: 1;
+    & label {
+      top: 12px;
+      height: 12px;
+      font-size: 11px;
+      letter-spacing: 0.03em;
+      z-index: -1;
+    }
+
+
+    & input {
+      //opacity: 1;
+      //visibility: visible;
+    }
+  }
+}
+
+.default-textarea {
+  position: relative;
+  background: #FAFAFA;
+  width: 100%;
+  height: 154px;
+  cursor: text;
+  top: 0;
+
+  & label {
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: #4F5A65;
+    cursor: text;
+    @include transition('font-size, top');
+  }
+
+  & textarea {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 0;
+    padding: 28px 20px 12px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #232323;
+    font-weight: 400;
+    //opacity: 0;
+    //visibility: hidden;
+    @include transition;
+  }
+
+  &.active {
+    z-index: 1;
+    & label {
+      top: 12px;
+      height: 12px;
+      font-size: 11px;
+      letter-spacing: 0.03em;
+      z-index: -1;
+    }
+
+
+    & input {
+      //opacity: 1;
+      //visibility: visible;
+    }
+  }
+}

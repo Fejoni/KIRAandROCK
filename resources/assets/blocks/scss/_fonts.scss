@@ -1,0 +1,27 @@
+@mixin font($f-name, $f-style, $f-weight, $f-url) {
+	@font-face {
+		font-family: $f-name;
+		font-style: $f-style;
+		font-weight: $f-weight;
+		font-display: swap;
+		src: // url('../fonts/#{$f-url}.woff2') format('woff2'),
+		url('../fonts/#{$f-url}.woff') format('woff'),
+		url('../fonts/#{$f-url}.ttf') format('truetype'),
+		url('../fonts/#{$f-url}.eot'),
+		url('../fonts/#{$f-url}.eot?#iefix') format('embedded-opentype');
+	}
+}
+
+@include font('Manrope', normal, 300, 'Manrope-Light');
+@include font('Manrope', normal, 400, 'Manrope-Regular');
+@include font('Manrope', normal, 600, 'Manrope-SemiBold');
+@include font('Manrope', normal, 700, 'Manrope-Bold');
+@include font('Manrope', normal, 800, 'Manrope-ExtraBold');
+
+@include font('MuseoSansCyrl', normal, 300, 'MuseoSansCyrl300');
+@include font('MuseoSansCyrl', normal, 500, 'MuseoSansCyrl500');
+@include font('MuseoSansCyrl', normal, 600, 'MuseoSansCyrl700');
+
+@include font('Gilroy', normal, 500, 'Gilroy-Medium');
+@include font('Gilroy', italic, 500, 'Gilroy-MediumItalic');
+@include font('Gilroy', normal, 600, 'Gilroy-Semibold');
